@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Bias</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Media Bias</a>
+          </div>
+        </div>
+      </nav>    
+      <div class="container">
+          <div class="row">
+              <h1>Article Bias/Unbiased:</h1>              
+          </div>
+          <div class="row">
+
+            <form action="/mediaBias" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="email">Article:</label>
+                  <textarea class="form-control" name="article" id="" cols="30" rows="10"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-success">Submit</button>
+              </form>
+
+          </div>
+      </div>
+</body>
+</html>
